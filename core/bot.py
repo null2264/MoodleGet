@@ -44,10 +44,10 @@ class Activity(object):
             try:
                 self.type = instanceName.xpath("./span")[0].text
             except IndexError:
-                self.type = " Custom"
+                self.type = " Post"
         except IndexError:
             self.name = ""
-            self.type = " Custom"
+            self.type = " Post"
         
         try:
             self.weblink = baseData[0].xpath("./a/@href")[0]
